@@ -31,7 +31,43 @@ h3 {
   text-align: center;
   font-size: 24px;
   font-weight: 300;
-  color: green;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    Green,
+    Lime,
+    Yellow,
+    DarkOrange,
+    Indigo,
+    purple,
+    BlueViolet,
+    rgb(111, 111, 236),
+    rgb(23, 193, 245),
+    blue,
+    rgb(114, 243, 9)
+  );
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /*Заголовок лого*/
@@ -47,7 +83,7 @@ h3 {
   justify-content: center;
 }
 
-/*Стиль блока с классом контейнер*/
+/*Стиль блока с классом container*/
 .container {
   max-width: 1230px;
   width: 100%;
@@ -55,30 +91,210 @@ h3 {
   padding: 0 15px;
 }
 
+/*Стиль блока с классом hero__container*/
 .hero__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 20px;
 }
 
+/*Стиль блока с классом hero__about*/
 .hero__about {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/*Стиль блока с классом hero__title FS D*/
 .hero__title {
   font-size: 48px;
   line-height: 1.1;
   margin-bottom: 20px;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    red,
+    Green,
+    Lime,
+    Yellow,
+    DarkOrange,
+    Indigo,
+    BlueViolet,
+    rgb(111, 111, 236),
+    rgb(23, 193, 245),
+    blue,
+    rgb(114, 243, 9)
+  );
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
+/*Стиль блока с классом hero__subtitle Name*/
 .hero__subtitle {
   font-size: 32px;
   font-weight: 400;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    gray,
+    rgb(155, 11, 212),
+    rgb(89, 158, 89),
+    rgb(156, 156, 24),
+    DarkOrange,
+    Indigo,
+    BlueViolet,
+    rgb(111, 111, 236),
+    rgb(23, 193, 245),
+    blue,
+    rgb(114, 243, 9)
+  );
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.hero__description {
+  font-size: 100%;
+  font-weight: 200;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    rgb(235, 13, 13),
+    rgb(155, 11, 212),
+    rgb(89, 158, 89),
+    rgb(156, 156, 24),
+    DarkOrange,
+    Indigo,
+    BlueViolet,
+    rgb(111, 111, 236),
+    rgb(23, 193, 245),
+    blue,
+    rgb(114, 243, 9)
+  );
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /*Соц.сети*/
 .hero__links {
   display: flex;
+}
+
+/*Дизайн иконок*/
+.hero__link {
+  margin-right: 10px;
+  font-size: 30px;
+  color: blue;
+  transition: color 0.3s;
+}
+
+.hero__link:hover {
+  color: orange;
+}
+
+/*Изображение*/
+.hero__box {
+  max-width: 500px;
+  height: 700px;
+  justify-self: center;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to right,
+    #fa709a 0%,
+    #fee140 100%
+  ); /*почему-то фон не поменялся наверное картинку не так сделал*/
+  border: 10px solid white;
+  box-shadow: 2px 5px 10px rgba(black);
+
+  animation: ava-animate 5s infinite alternate;
+}
+
+/*анимация*/
+@keyframes ava-animate {
+  0% {
+    border-radius: 57% 43% 29% 71% / 27% 72% 28% 73%;
+  }
+
+  40% {
+    border-radius: 28% 72% 53% 47% / 66% 27% 73% 34%;
+  }
+
+  60% {
+    border-radius: 15% 85% 14% 86% / 35% 57% 43% 65%;
+  }
+
+  100% {
+    border-radius: 53% 47% 39% 61% / 63% 28% 72% 37%;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 15px 0;
+  color: aquamarine;
+
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
 }
